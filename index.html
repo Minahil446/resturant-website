@@ -93,6 +93,94 @@
             </div>
         </div>
     </section>
+<!-- ==========================================================================
+       DAY 2: MENU SECTION (Search, Filter Buttons & Grid)
+       ========================================================================== -->
+    <main class="menu-container">
+        <h1 class="menu-title">Our Delicious Menu</h1>
+
+        <!-- Search & Filter Controls -->
+        <div class="filter-controls">
+            <!-- Search Bar -->
+            <input type="text" id="search-bar" placeholder="Search for your favorite dish...">
+
+            <!-- Category Buttons -->
+            <div class="category-buttons">
+                <button class="btn active" data-filter="all">All</button>
+                <button class="btn" data-filter="fast-food">Fast Food</button>
+                <button class="btn" data-filter="bbq">BBQ</button>
+                <button class="btn" data-filter="pizza">Pizza</button>
+                <button class="btn" data-filter="burgers">Burgers</button>
+                <button class="btn" data-filter="drinks">Drinks</button>
+                <button class="btn" data-filter="desserts">Desserts</button>
+            </div>
+        </div>
+
+        <!-- Menu Grid Layout -->
+        <div class="menu-grid" id="menu-grid">
+            
+            <!-- Card 1: Burgers -->
+            <div class="menu-card" data-category="burgers">
+                <img src="images/burger.jpg" alt="Cheese Burger" class="food-img">
+                <div class="card-info">
+                    <h3 class="food-title">Classic Cheese Burger</h3>
+                    <p class="food-desc">Juicy beef patty with melted cheddar, fresh lettuce, and signature sauce.</p>
+                    <span class="food-price">$8.99</span>
+                </div>
+            </div>
+
+            <!-- Card 2: Pizza -->
+            <div class="menu-card" data-category="pizza">
+                <img src="images/pizza.jpg" alt="Pepperoni Pizza" class="food-img">
+                <div class="card-info">
+                    <h3 class="food-title">Pepperoni Feast</h3>
+                    <p class="food-desc">Double pepperoni with mozzarella cheese and fresh basil on a crispy crust.</p>
+                    <span class="food-price">$12.99</span>
+                </div>
+            </div>
+
+            <!-- Card 3: BBQ -->
+            <div class="menu-card" data-category="bbq">
+                <img src="images/bbq.jpg" alt="Chicken Tikka" class="food-img">
+                <div class="card-info">
+                    <h3 class="food-title">Spicy Chicken Tikka</h3>
+                    <p class="food-desc">Tender chicken chunks marinated in local spices and grilled over charcoal.</p>
+                    <span class="food-price">$10.49</span>
+                </div>
+            </div>
+
+            <!-- Card 4: Fast Food -->
+            <div class="menu-card" data-category="fast-food">
+                <img src="images/fries.jpg" alt="Loaded Fries" class="food-img">
+                <div class="card-info">
+                    <h3 class="food-title">Cheesy Loaded Fries</h3>
+                    <p class="food-desc">Crispy golden fries topped with melted cheese, jalapenos, and garlic mayo.</p>
+                    <span class="food-price">$5.99</span>
+                </div>
+            </div>
+
+            <!-- Card 5: Drinks -->
+            <div class="menu-card" data-category="drinks">
+                <img src="images/mojito.jpg" alt="Mint Mojito" class="food-img">
+                <div class="card-info">
+                    <h3 class="food-title">Fresh Mint Mojito</h3>
+                    <p class="food-desc">A refreshing blend of fresh mint, lime juice, soda, and crushed ice.</p>
+                    <span class="food-price">$3.99</span>
+                </div>
+            </div>
+
+            <!-- Card 6: Desserts -->
+            <div class="menu-card" data-category="desserts">
+                <img src="images/brownie.jpg" alt="Lava Cake" class="food-img">
+                <div class="card-info">
+                    <h3 class="food-title">Chocolate Lava Cake</h3>
+                    <p class="food-desc">Rich chocolate cake with a warm, gooey molten chocolate center.</p>
+                    <span class="food-price">$6.49</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
 
     <!-- 6. Footer -->
     <footer>
