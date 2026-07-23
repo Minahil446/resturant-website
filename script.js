@@ -54,3 +54,59 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+/* ===================================
+   Contact Form Validation
+====================================== */
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // Form ko refresh hone se rokna
+
+        // Elements
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+
+        const nameError = document.getElementById('nameError');
+        const emailError = document.getElementById('emailError');
+        const messageError = document.getElementById('messageError');
+        const successMsg = document.getElementById('successMsg');
+
+        // Clear previous messages
+        nameError.textContent = '';
+        emailError.textContent = '';
+        messageError.textContent = '';
+        successMsg.textContent = '';
+
+        let isValid = true;
+
+        // Name Validation
+        if (nameInput.value.trim() === '') {
+            nameError.textContent = 'Please enter your full name.';
+            isValid = false;
+        }
+
+        // Email Validation
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (emailInput.value.trim() === '') {
+            emailError.textContent = 'Please enter your email address.';
+            isValid = false;
+        } else if (!emailInput.value.match(emailPattern)) {
+            emailError.textContent = 'Please enter a valid email address.';
+            isValid = false;
+        }
+
+        // Message Validation
+        if (messageInput.value.trim() === '') {
+            messageError.textContent = 'Please enter your message.';
+            isValid = false;
+        }
+
+        // Success Message
+        if (isValid) {
+            successMsg.textContent = 'Thank you! Your message has been sent successfully.';
+            contactForm.reset();
+        }
+    });
+}
